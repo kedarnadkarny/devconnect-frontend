@@ -5,12 +5,13 @@ import { GET_ERRORS, SET_CURRENT_USER } from './types';
 
 import keyURL from '../config/keys';
 
-let URL = "";
-if (process.env.NODE_ENV === 'production') {
-  URL = keyURL['prodURL'];
-} else {
-  URL = keyURL['devURL'];
-}
+let URL = keyURL['prodURL'];
+// if (process.env.NODE_ENV === 'production') {
+//   URL = keyURL['prodURL'];
+// } else {
+//   URL = keyURL['devURL'];
+// }
+
 
 // Register User
 export const registerUser = (userData, history) => dispatch => {

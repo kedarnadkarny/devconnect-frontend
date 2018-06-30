@@ -12,12 +12,12 @@ import {
 
 import keyURL from '../config/keys';
 
-let URL = "";
-if (process.env.NODE_ENV === 'production') {
-  URL = keyURL['prodURL'];
-} else {
-  URL = keyURL['devURL'];
-}
+let URL = keyURL['prodURL'];
+// if (process.env.NODE_ENV === 'production') {
+//   URL = keyURL['prodURL'];
+// } else {
+//   URL = keyURL['devURL'];
+// }
 
 // Add Post
 export const addPost = postData => dispatch => {

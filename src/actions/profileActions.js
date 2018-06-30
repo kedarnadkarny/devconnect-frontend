@@ -12,11 +12,11 @@ import {
 import keyURL from '../config/keys';
 
 let URL = keyURL['prodURL'];
-if (process.env.NODE_ENV === 'production') {
-  URL = keyURL['prodURL'];
-} else {
-  URL = keyURL['devURL'];
-}
+// if (process.env.NODE_ENV === 'production') {
+//   URL = keyURL['prodURL'];
+// } else {
+//   URL = keyURL['devURL'];
+// }
 
 // Get current profile
 export const getCurrentProfile = () => dispatch => {
