@@ -12,8 +12,6 @@ let URL = 'https://devconnector-backend.herokuapp.com';
 //   URL = keyURL['devURL'];
 // }
 
-console.log(URL);
-
 
 // Register User
 export const registerUser = (userData, history) => dispatch => {

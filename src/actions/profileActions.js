@@ -11,7 +11,7 @@ import {
 
 import keyURL from '../config/keys';
 
-let URL = keyURL['prodURL'];
+let URL = 'https://devconnector-backend.herokuapp.com';
 // if (process.env.NODE_ENV === 'production') {
 //   URL = keyURL['prodURL'];
 // } else {
