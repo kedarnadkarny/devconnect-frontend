@@ -12,6 +12,8 @@ let URL = keyURL['prodURL'];
 //   URL = keyURL['devURL'];
 // }
 
+console.log(URL);
+
 
 // Register User
 export const registerUser = (userData, history) => dispatch => {
