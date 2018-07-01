@@ -54,7 +54,7 @@ class PostItem extends Component {
                               type="button"
                               className="btn"
                               style={btnMedium}>
-                              <i class="fas fa-thumbs-up"></i> <span>{post.likes.length}</span>
+                              <i className="fas fa-thumbs-up"></i> <span>{post.likes.length}</span>
                             </button>
                           </td>
                         </tr>
@@ -65,7 +65,7 @@ class PostItem extends Component {
                               type="button"
                               className="btn"
                               style={btnMedium}>
-                              <i class="fas fa-thumbs-down"></i>
+                              <i className="fas fa-thumbs-down"></i>
                             </button>
                           </td>
                         </tr>
@@ -73,7 +73,7 @@ class PostItem extends Component {
                           <td>
                             <Link to={`/post/${post._id}`} className="btn"
                               style={btnMedium}>
-                              <i class="fas fa-comment"></i>
+                              <i className="fas fa-comment"></i>
                             </Link>
                           </td>
                         </tr>
@@ -85,7 +85,7 @@ class PostItem extends Component {
                                 className="btn"
                                 type="button"
                                 onClick={this.onDeleteClick.bind(this, post._id)}
-                                style={btnMedium}><i class="fas fa-trash-alt"></i></button>
+                                style={btnMedium}><i className="fas fa-trash-alt"></i></button>
                             </td>
                           </tr>)
                           : null

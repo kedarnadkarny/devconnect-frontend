@@ -31,7 +31,6 @@ class Post extends Component {
     }
     return (
       <div className="container">
-        POST
         <div className="row">
           <div className="col m12">
             <Link to="/feed" className="btn">

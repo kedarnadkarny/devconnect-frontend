@@ -10,9 +10,9 @@ import {
   DELETE_POST
 } from './types';
 
-import keyURL from '../config/keys';
+import keyURL from '../config/keys_dev';
 
-let URL = 'https://devconnector-backend.herokuapp.com';
+let URL = keyURL['prodURL'];
 // if (process.env.NODE_ENV === 'production') {
 //   URL = keyURL['prodURL'];
 // } else {
