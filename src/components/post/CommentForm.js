@@ -44,20 +44,22 @@ class CommentForm extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div>
+      <div className="row">
         <div className="col s12 m12">
-          <div className="card small">
-            <form onSubmit={this.onSubmit}>
-              <TextAreaFieldGroup
-                placeholder="Reply"
-                name="text"
-                value={this.state.text}
-                onChange={this.onChange}
-              />
-              <button className="btn">
-                Submit
+          <div className="card">
+            <div className="card-content">
+              <form className="container" onSubmit={this.onSubmit}>
+                <TextAreaFieldGroup
+                  placeholder="Reply"
+                  name="text"
+                  value={this.state.text}
+                  onChange={this.onChange}
+                />
+                <button className="btn">
+                  REPLY
               </button>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>

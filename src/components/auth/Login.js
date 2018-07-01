@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup';
+import Spinner from '../common/Spinner';
 
 class Login extends Component {
   constructor(props) {
@@ -49,6 +50,9 @@ class Login extends Component {
   }
   render() {
     const { errors } = this.state;
+    const style = {
+      width: '100%'
+    }
 
     return (
       <form onSubmit={this.handleSubmit}>
@@ -72,7 +76,7 @@ class Login extends Component {
             error={errors.password}
           />
         </div>
-        <input type="submit" value="Submit" className="btn" />
+        <input type="submit" value="Submit" className="btn" style={style} />
       </form>
     )
   }

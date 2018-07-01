@@ -20,8 +20,7 @@ class ProfileAbout extends Component {
 
     return (
       <div>
-        <h1>Profile About</h1>
-        <p>{firstname}'s Bio</p>
+        <h1>{firstname}'s Bio</h1>
         {isEmpty(profile.bio) ? (<span>{firstname} does not have a bio</span>) : (<span>{profile.bio}</span>)}
         <p>Skill Set</p>
         {skills}

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { deletePost, addLike, removeLike } from '../../actions/postActions';
+import { btnMedium } from '../common/Styling';
 
 class PostItem extends Component {
 
@@ -30,35 +31,73 @@ class PostItem extends Component {
   render() {
     const { post, auth, showActions } = this.props;
     return (
-      <div className="card">
-        <img src={post.avatar} alt="Avatar goes here" />
-        {post.name}
-        {post.text}
-        {showActions ? (
-          <span>
-            <button
-              onClick={this.onLikeClick.bind(this, post._id)}
-              type="button"
-              className="btn">
-              Like <span>{post.likes.length}</span>
-            </button>
-            <button
-              onClick={this.onUnLikeClick.bind(this, post._id)}
-              type="button"
-              className="btn">
-              Unlike
-            </button>
-            <Link to={`/post/${post._id}`} className="btn">
-              Comments
-            </Link>
-            {post.user === auth.user.id ? (
-              <button
-                className="btn"
-                type="button"
-                onClick={this.onDeleteClick.bind(this, post._id)}>DELETE</button>) : null
-            }
-          </span>
-        ) : null}
+      <div className="row">
+        <div className="col s12 m12">
+          <div className="card">
+            <div className="card-content">
+              <div className="row">
+                <div className="col m4">
+                  <img src={post.avatar} alt="Avatar goes here" />
+                </div>
+                <div className="col m4">
+                  <h5>{post.name}</h5>
+                  {post.text}
+                </div>
+                <div className="col m4">
+                  {showActions ? (
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <button
+                              onClick={this.onLikeClick.bind(this, post._id)}
+                              type="button"
+                              className="btn"
+                              style={btnMedium}>
+                              <i class="fas fa-thumbs-up"></i> <span>{post.likes.length}</span>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <button
+                              onClick={this.onUnLikeClick.bind(this, post._id)}
+                              type="button"
+                              className="btn"
+                              style={btnMedium}>
+                              <i class="fas fa-thumbs-down"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <Link to={`/post/${post._id}`} className="btn"
+                              style={btnMedium}>
+                              <i class="fas fa-comment"></i>
+                            </Link>
+                          </td>
+                        </tr>
+
+                        {post.user === auth.user.id ? (
+                          <tr>
+                            <td>
+                              <button
+                                className="btn"
+                                type="button"
+                                onClick={this.onDeleteClick.bind(this, post._id)}
+                                style={btnMedium}><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                          </tr>)
+                          : null
+                        }
+                      </tbody>
+                    </table>
+                  ) : null}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

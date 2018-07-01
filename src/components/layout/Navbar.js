@@ -50,9 +50,9 @@ class Navbar extends Component {
     return (
       <div>
         <nav>
-          <div className="nav-wrapper">
+          <div className="nav-wrapper teal">
             <ul>
-              <li><Link to="/">Logo</Link></li>
+              <li><Link to="/">DevConnect</Link></li>
               <li><Link to="/profiles">Developers</Link></li>
             </ul>
             {isAuthenticated ? authLinks : guestLinks}

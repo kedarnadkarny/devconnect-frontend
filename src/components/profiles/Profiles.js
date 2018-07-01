@@ -32,7 +32,7 @@ class Profiles extends Component {
           <div className="row">
             <div className="col m12">
               <h1>Developer Profile</h1>
-              <p>Browse and connect with developers</p>
+              <h5>Browse and connect with developers</h5>
               {profileItems}
             </div>
           </div>

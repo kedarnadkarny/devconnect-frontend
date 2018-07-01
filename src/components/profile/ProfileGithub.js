@@ -34,23 +34,23 @@ class ProfileGithub extends Component {
       <div key={repo.id} className="card">
         <div className="row">
           <div className="col m6">
-            <h4>
+            <h5>
               <Link to={repo.html_url} target="_blank">
                 {repo.name}
               </Link>
-            </h4>
+            </h5>
           </div>
           <div className="col m6">
-            <span>Stars: {repo.stargazers_count}</span>
-            <span>Watchers: {repo.watchers_count}</span>
-            <span>Forks: {repo.forks_count}</span>
+            <span class="new badge red"><i class="fas fa-star"></i> {repo.stargazers_count}</span>
+            <span class="new badge blue"><i class="fas fa-eye"></i> {repo.watchers_count}</span>
+            <span class="new badge green"><i class="fas fa-code-branch"></i> {repo.forks_count}</span>
           </div>
         </div>
       </div>
     ))
     return (
       <div>
-        <h1>ProfileGithub</h1>
+        <h1>Github</h1>
         <hr />
         {repoItems}
       </div>

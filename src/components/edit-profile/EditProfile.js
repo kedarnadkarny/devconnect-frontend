@@ -8,6 +8,7 @@ import InputGroup from '../common/InputGroup';
 import SelectListGroup from '../common/SelectListGroup';
 import { createProfile, getCurrentProfile } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
+import { btn, btnBlock } from '../common/Styling';
 
 class CreateProfile extends Component {
   constructor(props) {
@@ -190,7 +191,7 @@ class CreateProfile extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <Link to="/dashboard" className="btn btn-light">
+              <Link to="/dashboard" className="btn btn-light" style={btn} >
                 Go Back
               </Link>
               <h1 className="display-4 text-center">Edit Profile</h1>
@@ -264,6 +265,7 @@ class CreateProfile extends Component {
                       }));
                     }}
                     className="btn"
+                    style={btnBlock}
                   >
                     Add Social Network Links
                   </button>
@@ -274,6 +276,7 @@ class CreateProfile extends Component {
                   type="submit"
                   value="Submit"
                   className="btn"
+                  style={btnBlock}
                 />
               </form>
             </div>

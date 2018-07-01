@@ -8,6 +8,7 @@ import ProfileCreds from './ProfileCreds';
 import ProfileGithub from './ProfileGithub';
 import Spinner from '../common/Spinner';
 import { getProfileByHandle } from '../../actions/profileActions';
+import { btn } from '../common/Styling';
 
 class Profile extends Component {
   componentDidMount() {
@@ -33,7 +34,7 @@ class Profile extends Component {
         <div>
           <div className="row">
             <div className="col m6">
-              <Link to="/profiles" className="btn">
+              <Link to="/profiles" className="btn" style={btn}>
                 Back to profiles
               </Link>
             </div>

@@ -7,6 +7,7 @@ import Spinner from '../common/Spinner';
 import ProfileActions from './ProfileActions';
 import Experience from './Experience';
 import Education from './Education';
+import { btnDanger } from '../common/Styling';
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -18,6 +19,9 @@ class Dashboard extends Component {
   }
 
   render() {
+    // const btnDanger = {
+    //   backgroundColor: 'red'
+    // }
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
 
@@ -30,12 +34,12 @@ class Dashboard extends Component {
       if (Object.keys(profile).length > 0) {
         dashboardContent = (
           <div>
-            <p>Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link></p>
+            <h3>Welcome, <Link to={`/profile/${profile.handle}`}>{user.name}</Link></h3>
             <ProfileActions />
             <Experience experience={profile.experience} />
             <Education education={profile.education} />
             <div style={{ marginBottom: '60px' }} />
-            <button onClick={this.onDeleteClick.bind(this)} className="btn">Delete my account</button>
+            <button onClick={this.onDeleteClick.bind(this)} className="btn" style={btnDanger}>Delete my account</button>
           </div>
         )
       } else {
@@ -50,11 +54,7 @@ class Dashboard extends Component {
     }
     return (
       <div className="container">
-        <div className="row">
-          <div className="col m12">
-            {dashboardContent}
-          </div>
-        </div>
+        {dashboardContent}
       </div>
     )
   }

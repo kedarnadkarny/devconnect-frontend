@@ -5,6 +5,7 @@ import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addExperience } from '../../actions/profileActions';
+import { btn } from '../common/Styling';
 
 class AddExperience extends Component {
   constructor(props) {
@@ -66,7 +67,7 @@ class AddExperience extends Component {
         <div className="container">
           <div className="row">
             <div className="col m8 offset-m2">
-              <Link to="/dashboard" className="btn">
+              <Link to="/dashboard" className="btn" style={btn}>
                 Go Back
               </Link>
               <h1>Add Experience</h1>
@@ -143,7 +144,7 @@ class AddExperience extends Component {
 }
 
 AddExperience.propTypes = {
-  profile: PropTypes.object.errors,
+  profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired,
   addExperience: PropTypes.func.isRequired
 }

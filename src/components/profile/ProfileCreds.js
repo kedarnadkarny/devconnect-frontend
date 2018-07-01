@@ -6,7 +6,7 @@ class ProfileCreds extends Component {
     const { experience, education } = this.props;
 
     const expItems = experience.map(exp => (
-      <li key={exp._id}>
+      <ul key={exp._id}>
         <h4>{exp.company}</h4>
         <p>
           <Moment format="YYY/MM/DD">{exp.from}</Moment> -
@@ -19,11 +19,11 @@ class ProfileCreds extends Component {
         <p>
           {exp.description === '' ? null : (<span><strong>Description: </strong>{exp.description}</span>)}
         </p>
-      </li>
+      </ul>
     ));
 
     const eduItems = education.map(edu => (
-      <li key={edu._id}>
+      <ul key={edu._id}>
         <h4>{edu.school}</h4>
         <p>
           <Moment format="YYY/MM/DD">{edu.from}</Moment> -
@@ -40,12 +40,12 @@ class ProfileCreds extends Component {
           {edu.description === '' ? null : (<span><strong>Description: </strong>{edu.description}</span>)}
         </p>
 
-      </li>
+      </ul>
     ));
 
     return (
       <div>
-        <h1>ProfileCreds</h1>
+        <h1>Credentials</h1>
         <div className="row">
           {expItems}
         </div>
