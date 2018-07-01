@@ -3,9 +3,9 @@ import setAuthToken from '../utils/setAuthToken';
 import jwt_decode from 'jwt-decode';
 import { GET_ERRORS, SET_CURRENT_USER } from './types';
 
-import keyURL from '../config/keys_dev';
+//import keyURL from '../config/keys_dev';
 
-let URL = keyURL['prodURL'];
+let URL = 'https://devconnector-backend.herokuapp.com';
 // if (process.env.NODE_ENV === 'production') {
 //   URL = keyURL['prodURL'];
 // } else {
